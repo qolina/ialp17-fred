@@ -1,0 +1,49 @@
+
+Process of running fbes
+1. Preprocessing
+    1> time correct of raw-data-201301
+    > raw_tweet_time_correct.py -in rawData/*.txt -out rawData/rawTwitter_timeCorrect+date
+
+    2> read tweet from timeCorrectted-raw-data
+    > read_tweet_from_json.py -in rawData/rawTwitter_timeCorrect+date -out1 nonEng/tweetStruct+day -out2 nonEng/tweetText+day
+
+    3> cleaning (non-eng filtering and illegal charater deleting)
+    > prePrecessTweetText.py -in nonEng/tweetText+day -out clean/tweetCleanText+day
+
+    4> optional: [ tweet filtering by lm ]
+
+    5> pos-tagging
+        5.1> split cleaned_text/lmfilteredText
+            > ~/corpus/data_stock/split_clean.sh -in clean/tweetCleanText+day -out1 nlpanalysis/tweetText+day -out2 clean/tweetId+day
+            > "preprocess" dir is renamed to " nlpanalysis"
+        5.2> pos-tagging
+            > ~/twiTools/tpos-sheffield/twitie-tagger/tagging_stock.cmd -in nlpanalysis/tweetText+day -out nlpanalysis/text+day.tg
+
+    6> forparsing.py + chunking 
+        6.1> prepare for parsing/chunking (replace _postag with /postag; delete RT URL word, replace USR with NN)
+            > forparsing.cmd -in nlpanalysis/text+day.tg -out nlpanalysis/Tagtext+day.tg
+        6.2> chunking
+            > ~/nlpTools/npchunker/chunker.sh -in nlpanalysis/Tagtext+day.tg -out nlpanalysis/text+day.chunk
+
+    7> parsing[optional, used for another SED project]
+        > ~/twiTools/TweeboParser/run.sh -in tweetText+day -out tweetText+day.predict (copy tweetText from nlpanalysis, move predict to nlpanalysis)
+
+
+2. extract frames
+    > getSkl
+
+3. frame clustering
+    
+    > ~/corpus/data_twitter201301/idmap.cmd
+    > srcStat/getSocialInfo.py     tweetSocialFeature* > Tools/
+
+    > estimate_ps.py
+    > getbtySkl.py
+    > getEventSegPair.py
+    > getEvent.py
+
+
+4. frame event obtaining
+    > srcStat/statisticFrmOfSeg.py  (frmofele.cmd)
+    > getfrmofsegEvent.py
+

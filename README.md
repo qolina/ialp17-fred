@@ -1,2 +1,2 @@
 # ialp17-fred
-Semantic-Frame Representation for Event Detection on Twitter
+Main code for IALP17 paper 'Semantic-Frame Representation for Event Detection on Twitter'
