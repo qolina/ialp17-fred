@@ -55,7 +55,7 @@ def loadEvtEle(filePath):
     return unitHash
 
 print "###program starts at " + str(time.asctime())
-dataFilePath = r"path_to_fred/201301_skl/"
+dataFilePath = r"../ni_data/"
 
 # for version: post, postprocessing events. replace segments with their highest ranked frames
 if len(sys.argv) == 3:

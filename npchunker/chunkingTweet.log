@@ -1,0 +1,51 @@
+main thread: create g_vThread[0]=1105750352
+main thread: create g_vThread[1]=1116240208
+main thread: create g_vThread[2]=1126730064
+main thread: create g_vThread[3]=1137219920
+main thread: create g_vThread[4]=1147709776
+main thread: create g_vThread[5]=1158199632
+main thread: create g_vThread[6]=1168689488
+thread 0: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-02.tg > ../parsedTweet/Chunktext_2013-01-02 &&
+thread 6: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-03.tg > ../parsedTweet/Chunktext_2013-01-03 &&
+thread 4: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-04.tg > ../parsedTweet/Chunktext_2013-01-04 &&
+thread 1: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-05.tg > ../parsedTweet/Chunktext_2013-01-05 &&
+thread 2: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-06.tg > ../parsedTweet/Chunktext_2013-01-06 &&
+thread 3: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-07.tg > ../parsedTweet/Chunktext_2013-01-07 &&
+thread 5: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-08.tg > ../parsedTweet/Chunktext_2013-01-08 &&
+thread 0: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-02.tg > ../parsedTweet/Chunktext_2013-01-02 &&
+thread 0: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-09.tg > ../parsedTweet/Chunktext_2013-01-09 &&
+thread 4: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-04.tg > ../parsedTweet/Chunktext_2013-01-04 &&
+thread 4: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-10.tg > ../parsedTweet/Chunktext_2013-01-10 &&
+thread 6: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-03.tg > ../parsedTweet/Chunktext_2013-01-03 &&
+thread 6: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-11.tg > ../parsedTweet/Chunktext_2013-01-11 &&
+thread 1: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-05.tg > ../parsedTweet/Chunktext_2013-01-05 &&
+thread 2: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-06.tg > ../parsedTweet/Chunktext_2013-01-06 &&
+thread 1: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-12.tg > ../parsedTweet/Chunktext_2013-01-12 &&
+thread 2: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-13.tg > ../parsedTweet/Chunktext_2013-01-13 &&
+thread 3: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-07.tg > ../parsedTweet/Chunktext_2013-01-07 &&
+thread 3: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-07.tg > ../parsedTweet/Chunktext_2013-01-07 &&
+thread 5: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-08.tg > ../parsedTweet/Chunktext_2013-01-08 &&
+thread 3: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-14.tg > ../parsedTweet/Chunktext_2013-01-14 &&
+thread 0: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-09.tg > ../parsedTweet/Chunktext_2013-01-09 &&
+thread 0: get command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-15.tg > ../parsedTweet/Chunktext_2013-01-15 &&
+thread 6: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-11.tg > ../parsedTweet/Chunktext_2013-01-11 &&
+thread 5: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-08.tg > ../parsedTweet/Chunktext_2013-01-08 &
+thread 1: get command: &#exit&
+thread 6: get command: &#exit&
+thread 2: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-13.tg > ../parsedTweet/Chunktext_2013-01-13 &&
+thread 2: get command: &#exit&
+thread 5: get command: &#exit&
+thread 4: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-10.tg > ../parsedTweet/Chunktext_2013-01-10 &&
+thread 4: get command: &#exit&
+thread 0: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-15.tg > ../parsedTweet/Chunktext_2013-01-15 &&
+thread 0: get command: &#exit&
+main thread: joined g_vThread[0]=1105750352
+main thread: joined g_vThread[1]=1116240208
+main thread: joined g_vThread[2]=1126730064
+thread 3: execute done command: &sh chunker.sh < ~/ted/data/taggedTweet/Tagtext/Tagtext_2013-01-14.tg > ../parsedTweet/Chunktext_2013-01-14 &&
+thread 3: get command: &#exit&
+main thread: joined g_vThread[3]=1137219920
+main thread: joined g_vThread[4]=1147709776
+main thread: joined g_vThread[5]=1158199632
+main thread: joined g_vThread[6]=1168689488
+main thread: all threads exited normally, I am exiting, bye

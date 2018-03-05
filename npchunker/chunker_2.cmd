@@ -1,0 +1,15 @@
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext01.tg > ~/corpus/data_twitter201301/201301_preprocess/text01.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext02.tg > ~/corpus/data_twitter201301/201301_preprocess/text02.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext03.tg > ~/corpus/data_twitter201301/201301_preprocess/text03.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext04.tg > ~/corpus/data_twitter201301/201301_preprocess/text04.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext05.tg > ~/corpus/data_twitter201301/201301_preprocess/text05.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext06.tg > ~/corpus/data_twitter201301/201301_preprocess/text06.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext07.tg > ~/corpus/data_twitter201301/201301_preprocess/text07.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext08.tg > ~/corpus/data_twitter201301/201301_preprocess/text08.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext09.tg > ~/corpus/data_twitter201301/201301_preprocess/text09.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext10.tg > ~/corpus/data_twitter201301/201301_preprocess/text10.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext11.tg > ~/corpus/data_twitter201301/201301_preprocess/text11.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext12.tg > ~/corpus/data_twitter201301/201301_preprocess/text12.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext13.tg > ~/corpus/data_twitter201301/201301_preprocess/text13.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext14.tg > ~/corpus/data_twitter201301/201301_preprocess/text14.chunk &
+sh chunker.sh < ~/corpus/data_twitter201301/201301_preprocess/Tagtext15.tg > ~/corpus/data_twitter201301/201301_preprocess/text15.chunk &

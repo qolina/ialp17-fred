@@ -200,8 +200,7 @@ def loadText(textFilePath, IDmap, unitInvolvedHash):
 
 def loadOriText(oriTweetTextDir, tStr, IDmap, unitInvolvedHash):
     unitTextHash = {} #sid:text (word word word...)
-#    textFile = file(r"../data/201301_preprocess/text_2013-01-"+tStr)
-    textFile = file(oriTweetTextDir + r"/tweetText"+tStr)
+    textFile = file(oriTweetTextDir + r"/../tweetText"+tStr)
     idx = 0
     while True:
         lineStr = textFile.readline().lower()
@@ -263,7 +262,7 @@ def geteSegPairSim(dataFilePath, M, idmapFileDir, tweetSocialInfoDir, oriTweetTe
         #timeHash = loadTime(tweetTimeFilePath, dataFilePath+item)
         timeHash = loadTime(tweetTimeFilePath, None)
 
-        IDmapFilePath = idmapFileDir + "IDmap_2015-05-" + tStr
+        IDmapFilePath = idmapFileDir + "IDmap_2013-01-" + tStr
         IDmap = loadID(IDmapFilePath)
 
         if UNIT == "skl":
@@ -364,8 +363,7 @@ def getTopItems(sampleHash, K):
 ############################
 ## main Function
 global Day, UNIT, TWEETNUM, btyEleFilename 
-UNIT = "segment"
-#UNIT = "skl"
+UNIT = "skl"
 
 if __name__=="__main__":
     if len(sys.argv) == 2:
@@ -380,16 +378,15 @@ if __name__=="__main__":
     print "###program starts at " + str(time.asctime())
 
 
-    dataFilePath = r"path_to_fred/201301_skl/"
+    dataFilePath = r"../ni_data/"
 
-    dfFilePathFromSkl = dataFilePath + "wordDF"
-    dfFilePathFromOriText = dataFilePath + "../clean/"+ "wordDF"
+    dfFilePathFromOriText = dataFilePath + "aux/"+ "wordDF"
 
-    idmapFileDir = dataFilePath + "../clean/"
-    tweetSocialInfoDir = dataFilePath + "../nonEng/"
+    idmapFileDir = dataFilePath + "aux/"
+    tweetSocialInfoDir = dataFilePath + "aux/"
 
     # used for calculate textSim of bursty feature(frame or segment)
-    oriTweetTextDir = dataFilePath + "../preprocess"
+    oriTweetTextDir = dataFilePath + "aux"
 
     TWEETNUM = 28651435 # total tweet number in relSkl-2013-01-??
 

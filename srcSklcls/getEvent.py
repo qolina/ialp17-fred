@@ -319,8 +319,7 @@ def writeEvent2File(eventHash, score_eventHash, score_nodeHash, reverseSegHash, 
 def clusterEventSegment(dataFilePath, kNeib, taoRatio):
     fileList = os.listdir(dataFilePath)
     for item in sorted(fileList):
-        #if item.find("relSkl_") != 0:
-        if item.find("segged_tweet") != 0:
+        if item.find("relSkl_") != 0:
             continue
         tStr = item[-2:]
         if tStr != Day:
@@ -369,12 +368,11 @@ if __name__=="__main__":
     kNeib = 5
     taoRatio = 2
 
-    dataFilePath = r"path_to_fred/201301_skl/"
+    dataFilePath = r"../ni_data/"
 
-    wikiPath = "path_to_anchorFile/anchorProbFile_all"
+    wikiPath = "../data/anchorProbFile_all"
 
     if True:
-#    if False:
         global wikiProbHash
         wikiProbHash = loadWiki(wikiPath)
 

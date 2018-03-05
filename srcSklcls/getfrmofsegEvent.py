@@ -32,7 +32,7 @@ else:
     print "Usage python getOtherEvent.py day frmofeleFilename"
     sys.exit()
 
-dirPath = r"/path_to_fred/201301_skl/"
+dirPath = r"../ni_data/"
 fileList = os.listdir(dirPath)
 fileList.sort()
 

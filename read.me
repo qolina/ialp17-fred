@@ -10,40 +10,66 @@ Process of running fbes
     3> cleaning (non-eng filtering and illegal charater deleting)
     > prePrecessTweetText.py -in nonEng/tweetText+day -out clean/tweetCleanText+day
 
-    4> optional: [ tweet filtering by lm ]
-
-    5> pos-tagging
-        5.1> split cleaned_text/lmfilteredText
+    4> pos-tagging
+        4.1> split cleaned_text/lmfilteredText
             > ~/corpus/data_stock/split_clean.sh -in clean/tweetCleanText+day -out1 nlpanalysis/tweetText+day -out2 clean/tweetId+day
             > "preprocess" dir is renamed to " nlpanalysis"
-        5.2> pos-tagging
+        4.2> pos-tagging
             > ~/twiTools/tpos-sheffield/twitie-tagger/tagging_stock.cmd -in nlpanalysis/tweetText+day -out nlpanalysis/text+day.tg
 
-    6> forparsing.py + chunking 
-        6.1> prepare for parsing/chunking (replace _postag with /postag; delete RT URL word, replace USR with NN)
+    5> forparsing.py + chunking 
+        5.1> prepare for parsing/chunking (replace _postag with /postag; delete RT URL word, replace USR with NN)
             > forparsing.cmd -in nlpanalysis/text+day.tg -out nlpanalysis/Tagtext+day.tg
-        6.2> chunking
+        5.2> chunking
             > ~/nlpTools/npchunker/chunker.sh -in nlpanalysis/Tagtext+day.tg -out nlpanalysis/text+day.chunk
 
-    7> parsing[optional, used for another SED project]
-        > ~/twiTools/TweeboParser/run.sh -in tweetText+day -out tweetText+day.predict (copy tweetText from nlpanalysis, move predict to nlpanalysis)
+Note:
+If use our data, please do following procedures.
+If use your own jason data, for preprocessing
+    ignore step 1>; split your data by time window(e.g., day)
+    use your own tweet reading file for step 2>;
+    run preprocessingTweetText.py in your own directory;
+    conduct pos-tagging with twitie-tagger of sheffield university;
+    conduct chunking with npchunker;
+
+After preprocessing, your file should be in ialp17-fred/ni_data/ directory
+tweetText?? (last two character is time window number, e.g., 01~15)
+Tagtext??.tg (pos-tagged file)
+text??.chunk (chunked file)
 
 
 2. extract frames
-    > getSkl
+    > srcGetSkl/getRelSkl.py
+        for reference: srcGetSkl/run.sh
+        input: Tagtext01.tg, text01.chunk
+        output: relSkl_2013-01-?? 
 
-3. frame clustering
+3. prepare features for clustering
+    > rawdata/IDmap_2013-01-?? > ../ni_data/aux
+    > srcStat/getSocialInfo.py     tweetSocialFeature* > ../ni_data/aux
+
+4. frame clustering
+   for reference: srcSklcls/run.sh
     
-    > ~/corpus/data_twitter201301/idmap.cmd
-    > srcStat/getSocialInfo.py     tweetSocialFeature* > Tools/
-
     > estimate_ps.py
+        input: relSkl_2013-01-??
+        output : skl_ps
     > getbtySkl.py
+        input: relSkl_2013-01-01, tweetSocialFeature01, IDmap_2013-01-01
+        output: eventskl01
     > getEventSegPair.py
+        input: relSkl_2013-01-01, eventskl01, ../ni_data/aux/wordDF, IDmap_2013-01-01, tweetSocialFeature01 
+        output: segPairFile01
     > getEvent.py
+        input: relSkl_2013-01-01, segPairFile01
+        output: EventFile01_k5t2
 
 
-4. frame event obtaining
-    > srcStat/statisticFrmOfSeg.py  (frmofele.cmd)
+5. frame event obtaining
+    > statisticFrmOfSeg.py  
+        input: eventskl01
+        output: frmOfele01
     > getfrmofsegEvent.py
+        input: EventFile01_k5t2, frmOfele01
+        output: frmEventFile01
 

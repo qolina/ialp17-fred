@@ -7,7 +7,7 @@ import sys
 import math
 import cPickle
 
-sys.path.append("path_to_fred/srcStat")
+sys.path.append("../srcStat")
 from getSocialInfo import *
 
 ############################
@@ -224,14 +224,14 @@ if __name__ == "__main__":
 
     print "###program starts at " + str(time.asctime())
 
-    dataFilePath = r"/home/yxqin/corpus/data_twitter201301/201301_skl/"
+    dataFilePath = r"../ni_data/"
 
     psFilePath = dataFilePath + UNIT + "_ps"
 
     # for frame
-    socialFeaFilePath = dataFilePath + r"../nonEng/"
+    socialFeaFilePath = dataFilePath + r"/aux/"
 
-    idmapFilePath = dataFilePath + r"../clean/"
+    idmapFilePath = dataFilePath + r"/aux/"
 
     windowHash = {} # timeSliceIdStr:tweetNum
     unitpsHash = {} # unit:ps

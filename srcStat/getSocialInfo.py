@@ -7,8 +7,8 @@ import cPickle
 import sys
 import json
 
-sys.path.append("/path_to_fred/srcPreprocess")
-sys.path.append("path_to_fred/Scripts")
+sys.path.append("../srcPreprocess")
+sys.path.append("../Scripts")
 from Tweet import *
 from read_tweet_from_json import *
 from strOperation import *  # readTime

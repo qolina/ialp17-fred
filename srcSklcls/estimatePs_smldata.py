@@ -6,10 +6,10 @@ import os
 import sys
 import cPickle
 
-sys.path.append("path_to_fred/Scripts")
+sys.path.append("../Scripts")
 from hashOperation import *
 
-sys.path.append("path_to_fred/srcPreprocess/")
+sys.path.append("../srcPreprocess/")
 from preProcessTweetText import *
 
 
@@ -69,7 +69,7 @@ def statisticDF_fromFile(dataFilename, predefinedUnitHash):
 
 def statisticDF(dataFilePath, predefinedUnitHash):
 
-    stopFileName = r"path_to_fred/data/stoplist.dft"
+    stopFileName = r"../data/stoplist.dft"
     stopwordHash = loadStopword(stopFileName)
 
     unitHash = {} #unit:df_hash
@@ -215,7 +215,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 2:
         dataFilePath = sys.argv[1]+"/"
     else:
-        print "Usage python estimatePs_smldata.py [datafilepath] (default: ../parsedTweet/)"
+        print "Usage python estimatePs_smldata.py [datafilepath] (default: ../ni_data/)"
         sys.exit(0)
 
     [unitHash, windowHash]  = statisticDF(dataFilePath, None)
@@ -224,5 +224,4 @@ if __name__ == "__main__":
     write2psFile(unitHash, windowHash, psFilePath)
 
     print "###program ends at " + str(time.asctime())
-
 
